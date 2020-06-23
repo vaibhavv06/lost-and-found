@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script 
+    src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js" 
+    integrity="sha256-T/f7Sju1ZfNNfBh7skWn0idlCBcI3RwdLSS4/I7NQKQ=" 
+    crossorigin="anonymous"></script>
+  <title>Biometric</title>
+  <script src="https://www.gstatic.com/firebasejs/7.15.4/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.15.4/firebase-analytics.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.15.4/firebase-storage.js"></script>
+  <script src="/firebase-config.js"></script>
+</head>
+<body>
+    <script src="/upload.js"></script>
+    <div>
+      <input type="file" id="face-input">
+      <button type="button" onclick="upload_face_image()">Go</button>
+    </div>
+    <div>
+      <input type="file" id="fingerprint-input">
+      <select name="finger-type" id="finger-type">
+        <option value="thumb">Thumb</option>
+        <option value="index">Index finger</option>
+        <option value="middle">Middle finger</option>
+        <option value="ring">Ring finger</option>
+        <option value="little">Little finger</option>
+      </select>
+      <button type="button" onclick="upload_fingerprint()">Go</button>
+    </div>
+</body>
+</html>
