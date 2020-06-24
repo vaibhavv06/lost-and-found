@@ -8,27 +8,47 @@
     integrity="sha256-T/f7Sju1ZfNNfBh7skWn0idlCBcI3RwdLSS4/I7NQKQ=" 
     crossorigin="anonymous"></script>
   <title>Biometric</title>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js" integrity="sha384-1CmrxMRARb6aLqgBO7yyAxTOQE2AKb9GfXnEo760AUcUmFx3ibVJJAzGytlQcNXd" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <script src="https://www.gstatic.com/firebasejs/7.15.4/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.15.4/firebase-analytics.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.15.4/firebase-storage.js"></script>
   <script src="/firebase-config.js"></script>
 </head>
 <body>
+<center><img src = "lostf.jpg" alt="lost and found"></center>
     <script src="/upload.js"></script>
     <div>
-      <input type="file" id="face-input">
-      <button type="button" onclick="upload_face_image()">Go</button>
+        <h2>Face Recognition</h2>
+<!--      <input type="file" id="face-input">-->
+        <div class="input-group mb-3">
+          <div class="custom-file">
+            <input type="file" class="custom-file-input" id="face-input">
+            <label class="custom-file-label" for="face-input" aria-describedby="inputGroupFileAddon02">Choose file</label>
+          </div>
+        </div>
+      <button class="btn btn-primary" type="button" onclick="upload_face_image()">Go</button>
     </div>
+    <br>
+    <hr>
+    <br>
     <div>
-      <input type="file" id="fingerprint-input">
-      <select name="finger-type" id="finger-type">
+        <h2>Fingerprint Indentification</h2>
+<!--      <input type="file" id="fingerprint-input">-->
+        <div class="input-group mb-3">
+          <div class="custom-file">
+            <input type="file" class="custom-file-input" id="fingerprint-input">
+            <label class="custom-file-label" for="fingerprint-input" aria-describedby="inputGroupFileAddon02">Choose file</label>
+          </div>
+        </div>
+      <select class="custom-select" name="finger-type" id="finger-type">
         <option value="thumb">Thumb</option>
         <option value="index">Index finger</option>
         <option value="middle">Middle finger</option>
         <option value="ring">Ring finger</option>
         <option value="little">Little finger</option>
       </select>
-      <button type="button" onclick="upload_fingerprint()">Go</button>
+      <button class="btn btn-primary" type="button" onclick="upload_fingerprint()">Go</button>
     </div>
 </body>
 </html>
